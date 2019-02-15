@@ -1,0 +1,181 @@
+\documentclass[a4paper, 11pt]{scrartcl}
+
+\usepackage{ngerman}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{ae,aecompl}
+
+\usepackage{amsmath,amssymb,amstext}
+
+\usepackage{psfrag}
+
+\usepackage[automark]{scrpage2}
+
+\usepackage{ifpdf}
+
+\ifpdf%   (definitions for using pdflatex instead of latex)
+
+  %%% graphicx: support for graphics
+  \usepackage[pdftex]{graphicx}
+
+  \pdfcompresslevel=9
+
+  %%% hyperref (hyperlinks in PDF): for more options or more detailed
+  %%%          explanations, see the documentation of the hyperref-package
+  \usepackage[%
+    %%% general options
+    pdftex=true,      %% sets up hyperref for use with the pdftex program
+    %plainpages=false, %% set it to false, if pdflatex complains: ``destination with same identifier already exists''
+    %
+    %%% extension options
+    backref,      %% adds a backlink text to the end of each item in the bibliography
+    pagebackref=false, %% if true, creates backward references as a list of page numbers in the bibliography
+    colorlinks=true,   %% turn on colored links (true is better for on-screen reading, false is better for printout versions)
+    %
+    %%% PDF-specific display options
+    bookmarks=true,          %% if true, generate PDF bookmarks (requires two passes of pdflatex)
+    bookmarksopen=false,     %% if true, show all PDF bookmarks expanded
+    bookmarksnumbered=false, %% if true, add the section numbers to the bookmarks
+    %pdfstartpage={1},        %% determines, on which page the PDF file is opened
+    pdfpagemode=None         %% None, UseOutlines (=show bookmarks), UseThumbs (show thumbnails), FullScreen
+  ]{hyperref}
+
+
+  %%% provide all graphics (also) in this format, so you don't have
+  %%% to add the file extensions to the \includegraphics-command
+  %%% and/or you don't have to distinguish between generating
+  %%% dvi/ps (through latex) and pdf (through pdflatex)
+  \DeclareGraphicsExtensions{.pdf}
+
+\else %else   (definitions for using latex instead of pdflatex)
+
+  \usepackage[dvips]{graphicx}
+
+  \DeclareGraphicsExtensions{.eps}
+
+  \usepackage[%
+    dvips,           %% sets up hyperref for use with the dvips driver
+    colorlinks=false %% better for printout version; almost every hyperref-extension is eliminated by using dvips
+  ]{hyperref}
+
+\fi
+
+
+%%% sets the PDF-Information options
+\hypersetup{
+  pdftitle={},
+  pdfauthor={}, %%
+  pdfsubject={}, %%
+  pdfcreator={Accomplished with LaTeX2e and pdfLaTeX with hyperref-package.}, %%
+  pdfproducer={}, %%
+  pdfkeywords={} %%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% define the titlepage
+%%%
+
+% \subject{}   %% subject which appears above titlehead
+% \titlehead{} %% special heading for the titlepage
+
+%%% title
+\title{Intelligente Systeme Ausarbeitung}
+
+%%% author(s)
+\author{Florian Nehmer (Matr.Nr.: 2193399)}
+
+%%% date
+\date{\today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% set heading and footer
+%%%
+
+%%% scrheadings default:
+%%%      footer - middle: page number
+\pagestyle{scrheadings}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% begin document
+%%%
+
+\begin{document}
+
+%%% include the title
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% begin main document
+%%% structure: \section \subsection \subsubsection \paragraph \subparagraph
+%%%
+
+\section{Aufgabe Suchen, Lernen, NLP; Jeweils $\frac{1}{2}$ Seite}
+noch ein Hinweis zu Ihren Ausarbeitungen: Für 'Suchen', 'Lernen' und 'Verarbeitung natürlicher Sprache' soll nur eine Stichwortliste
+abgegeben werden, bitte kein Fließtext. Es geht darum, dass Sie sich selbst klar machen, welche Konzepte Sie sich erarbeitet haben.
+Ein Beispiel wie so etwas aussehen kann für 'Suchen'
+
+\begin{itemize}
+\item A*-Algorithmus im Detail
+\item IDA*-Algorithmus im Detail
+\item Zulässigkeit
+\item Monotonie
+\item Heuristiken
+\item Eigenschaften der beiden Algorithmen: Vollständigkeit, Optimalität
+\end{itemize}
+
+\newpage
+
+\section{Intelligenz; Max. 5 Seiten}
+Argumentation auf Basis von Literatur: Was macht Intelligenz aus und was ist auf einer
+Maschine möglich?
+
+\newpage
+
+\section{Was kann ich tun, um als Informatiker verantwortlich zu handeln?; $\frac{1}{2}$ Seite}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%
+%%% end main document
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \appendix  %% include it, if something (bibliography, index, ...) follows below
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% bibliography
+%%%
+%%% available styles: abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt
+%%%
+% \bibliographystyle{plain}
+
+%%% name of the bibliography file without .bib
+%%% e.g.: literatur.bib -> \bibliography{literatur}
+% \bibliography{FIXXME}
+
+\end{document}
