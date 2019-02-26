@@ -1,6 +1,6 @@
 \documentclass[a4paper, 11pt]{scrartcl}
 
-\usepackage{ngerman}
+\usepackage[ngerman]{babel}
 
 \usepackage[utf8]{inputenc}
 
@@ -73,7 +73,7 @@
   pdftitle={},
   pdfauthor={}, %%
   pdfsubject={}, %%
-  pdfcreator={Accomplished with LaTeX2e and pdfLaTeX with hyperref-package.}, %%
+  pdfcreator={}, %%
   pdfproducer={}, %%
   pdfkeywords={} %%
 }
@@ -113,13 +113,17 @@
 
 \begin{document}
 
+
 %%% include the title
 \maketitle
+\thispagestyle{empty}
 
 \newpage
 \tableofcontents
+\thispagestyle{empty}
 
 \newpage
+\pagenumbering{arabic}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -127,19 +131,7 @@
 %%% structure: \section \subsection \subsubsection \paragraph \subparagraph
 %%%
 
-\section{Aufgabe Suchen, Lernen, NLP; Jeweils $\frac{1}{2}$ Seite}
-noch ein Hinweis zu Ihren Ausarbeitungen: Für 'Suchen', 'Lernen' und 'Verarbeitung natürlicher Sprache' soll nur eine Stichwortliste
-abgegeben werden, bitte kein Fließtext. Es geht darum, dass Sie sich selbst klar machen, welche Konzepte Sie sich erarbeitet haben.
-Ein Beispiel wie so etwas aussehen kann für 'Suchen'
-
-\begin{itemize}
-\item A*-Algorithmus im Detail
-\item IDA*-Algorithmus im Detail
-\item Zulässigkeit
-\item Monotonie
-\item Heuristiken
-\item Eigenschaften der beiden Algorithmen: Vollständigkeit, Optimalität
-\end{itemize}
+\section{Aufgabe Suchen, Lernen, NLP}
 
 \subsection{Suchen}
 \begin{itemize}
@@ -167,56 +159,67 @@ Ein Beispiel wie so etwas aussehen kann für 'Suchen'
 
 \section{Was macht Intelligenz aus?}
 
-2014 prophezeite Steven Hawking der BBC, dass die Entwicklung voller künstlicher Intelligenz, das Ende der Menschheit bedeuten wird, als Teil seiner Antwort auf eine Frage über sein Kommunikationsgerät, welches mit Hilfe eines KI Systems funktionierte.
+2014 prophezeite \textsc{Steven Hawking} der British Broadcasting Corporation (BBC) als Teil seiner Antwort auf eine Frage über sein Kommunikationsgerät, welches auf einem künstilchen Intelligenz (KI) System basierte, dass die Entwicklung voller künstlicher Intelligenz zukünftig das Ende der Menschheit bedeuten würde (vgl. \cite{BBC2014}).
 
-Sind diese heute schon realen KI Systeme die Vorläufer einer vollen künstlichen Intelligenz? Ist es überhaupt möglich, dass Maschinen mit einer vollen KI an die menschliche Intelligenz heran kommen? Was macht eigentlich Intelligenz aus? Diesen Fragen soll nachfolgender Text auf den Grund gehen. Zuerst werden Definition des Begriffes Intelligenz beleuchtet. Dafür werden verschiedene Intelligenzmodelle aus dem Bereich der Psychologie herangezogen, um letztendlich ein Bild über den Begriff Intelligenz zu erhalten. Desweiteren wird der Begriff emotionale Intelligenz skizziert und mit dem Begriff Intelligenz unter menschlicher Intelligenz zusammengefasst.
-
-Nachfolgend beschäftigt sich der Text damit, was heutzutage unter dem Begriff küstlicher Intelligenz verstanden wird. Im Anschluss wird die menschliche Intelligenz, der künstlichen Intelligenz gegenüber gestellt, um zu erörtern, was menschliche Intelligenz ausmacht. Zum Schluss wird noch ein Gedankenspiel skizziert, was mit Maschinen theoretisch möglich sein könnte.
+Doch sind diese heute schon realen KI Systeme die Vorläufer einer vollen künstlichen Intelligenz? Ist es überhaupt möglich, dass Maschinen mit einer vollen KI an die menschliche Intelligenz heranreichen und was macht eigentlich Intelligenz aus? Diesen Fragen wird der nachfolgende Text auf den Grund gehen. Um sich den Begriff der Intelligenz zu nähern, werden zunächst verschiedene Intelligenzmodelle aus dem Bereich der Psychologie dargestellt. Daraufhin beschäftigt sich der Text damit, was gegenwärtig unter dem Begriff küstlicher Intelligenz verstanden wird. Im Anschluss wird die menschliche Intelligenz, der künstlichen Intelligenz gegenüber gestellt, um zu erörtern, was menschliche Intelligenz ausmacht. Es folgt ein Ausblick, was zukünftig mit Maschinen theoretisch möglich sein könnte. Abschließend werden die aufgestellten Thesen in einem Fazit zusammengefasst.
 
 \subsection{Intelligenz}
-Der Begriff Intelligenz hat keine algemeingültige Definition. In der Psychologie sind im Laufe der Zeit viel mehr verschiedene Intelligenzmodelle entstanden. Im Folgenden werden drei Intelligenzmodelle herangezogen, um verschiedene Facetten des Intelligenzbegriffes kennenzulernen
+Der Begriff (von lateinisch intellegere - erkennen, einsehen, verstehen)
+Für den Begriff ``Intelligenz'' existiert keine allgemeingültige Definition. In der Psychologie sind im Laufe der Zeit vielmehr verschiedene Intelligenzmodelle entstanden. Im Folgenden werden drei Intelligenzmodelle herangezogen, um verschiedene Facetten des Intelligenzbegriffes aufzuzeigen.
 
-\subsubsection{Zwei-Faktoren-Modell von Horn und Cattle}
-Zu den vorherrschenden Theorien gehört zum Beispiel das Zwei-Faktoren-Modell von Horn und Cattle. Dieses beschreibt 2 Arten von Intelligenz. Die Kristalline Intelligenz, welche die Erfahrungen darstellt, die ein Mensch im Laufe seines Lebens sammelt und die Fakten, die er dadurch lernt. Die kristalline Intelligenz sei stark kulturell beeinflusst. Die zweite der beiden Arten ist die fluide Intelligenz, welche die Fähigkeit eines Menschens repräsentiert, sich Fakten und Erfahrungen anzueigenen, also das Denken. Ein hohes Maß an fluider Intelligenz sei notwendig, um sich schnell in unbekannten Situationen zurecht zu finden. Die fluide Intelligenz sei genetisch determiniert. Die fluide Intelligenz nehme ab dem 25. Lebensjahr ab und die kristalline Intelligenz steige bis zum 25. Lebenjahr stark an, jedoch danach nur noch langsam. (vgl. \cite{Dorsch2019}). Es zeigen sich in diesem Modell schon zwei sehr grobe Facetten des Begriffes Intelligenz.
+\subsubsection{Zwei-Faktoren-Modell von und \textsc{Cattel}}
+Zu den klassischen Theorien gehört insbesondere das Zwei-Faktoren-Modell von \textsc{Cattel}, welcher Spearmans Theorie (siehe auführlicher \cite{Spektrum2000}) präzisiert, indem er 2 Arten von von Intelligenz präzisiert. Die \textit{Kristalline Intelligenz} einerseits, welche die Erfahrungen darstelle, die ein Mensch im Laufe seines Lebens sammle und die Fakten, die er dadurch erlerne. Somit sei die kristalline Intelligenz stark kulturell beeinflusst. Andererseits wird die \textit{Fluide Intelligenz} beschrieben, welche die Fähigkeit eines Menschens repräsentiere, sich Fakten und Erfahrungen anzueigenen. Ein hohes Maß an fluider Intelligenz sei notwendig, um sich schnell in unbekannten Situationen zurecht zu finden. Die fluide Intelligenz sei genetisch determiniert.  Sie nehme ab dem 25. Lebensjahr ab. Die kristalline Intelligenz hingegen steige bis zum 25. Lebenjahr stark an. Danach lässt sich nur noch ein langsamer Anstieg beobachten (vgl. \cite{Dorsch2019}). Es zeigen sich in diesem Modell schon zwei sehr grobe Facetten des Begriffes Intelligenz.
 
-\subsubsection{Sternbergs triarchisches Modell}
-Ein weiteres wichtiges Intelligenzmodell lieferte der Psychologe Robert J. Sternberg, nämlich das sogenannte triarchische Modell auch unter dem Namen Komponentenmodell bekannt. Sternberg sieht einen Zusammenhang zwischen Intelligenz und Erfolg im Leben und unterteilt Intelligenz in 3 Bereiche: Analytische-, Praktische- und Erfahrungsbezogene Fähigkeiten. Er sieht also die Intelligenz mehr als einen Prozess, also die Art und Weise wie Informationen verarbeitet werden. Im Gegensatz zum Modell zuvor werden hier alleine die Fähigkeiten in den Vordergrund gestellt. Wobei die Erfahrungen als Fähigkeit betrachtet werden und incht als Schatz, wie in der Theorie von Horn und Cattle. (vgl.\cite{Stern1984})
-
-\subsubsection{Multiple Intelligenzen nach Gardner}
-Als letztes Modell der menschlichen Intelligenz betrachten wir das Modell der multiplen Intelligenzen von Gardner. Dieser formulierte ein noch feingranulareres Modell der Intelligenz und kategorisiert den Intelligenzbegriff in 8 Unterkategorien. Außerdem definiert er 3 Lerntypen, wobei er auch sagt, dass die meisten Menschen mit einem Lerntypen am besten klar kommen, also sich quasi auf einen Lerntypen fokussieren. Diese drei Lerntypen beziehen sich auf folgende drei Sinne der Wahrnehmung: Sehen, Hören und kinästhetisch (Bewegungsempfindungen) Die 8 Unterkategorien beziehen auch Aspekte der menschlichen Wahrnehmung ein:
+\subsubsection{Multiple Intelligenzen nach \textsc{Gardner}}
+Im Gegensatz zum Modell von \textsc{Cattel} dominieren in der jüngeren Forschung multidimensionale und prozessorientierte Modelle der Intelligenz. Hierbei wird Intelligenz somit als Sammlung von Fähigkeiten betrachtet und nicht wie bei \textsc{Cattel} als angeeignetes Wissen. So formuliert \textsc{Gardner} in seinem Model der \textit{multiplen Intelligenzen} zehn Dimensionen der Intelligenz. Die 10 Dimensionen beziehen auch Aspekte der menschlichen Wahrnehmung ein. Zur Definitionen dieser Dimensionen stellt \textsc{Garnder} verschiedene Kriterien auf. Eine interlektuelle Fähigkeit muss einer bestimmten Hirnregion zugeordnet werden können, desweiteren muss für diese Fähigkeiten eine Spezialbegabung nachgewiesen werden können. Andere Fähigkeiten hingegen können gleichzeitig durchschnittlich und/oder unterdurchschnittlich ausgeprägt sein. Außerdem sollte die Fähigkeit unabhängig von unterschiedlichen kulturellen Einflüssen sein. Auch muss eine interlektuelle Fähigkeit expirementell nachweisbar sein und spezifisch geistig operationalisierbar sein. \textsc{Gardner} modelliert daher folgende Dimensionen der Intelligenz:
 \begin{itemize}
   \item Linguistische Intelligenz erlaubt es Individuuen miteinander über Sprache zu kommunizieren.
   \item Logisch-Mathematische Intelligenz erlaubt es Individuen Abstrakte Modelle und Relation zu benutzen, bzw zu erkennen.
   \item Musikalische Intelligenz erlaubt es Leuten Bedeutungen durch Geräusche zu kreieren, zu verstehen, oder über diese zu kommunizieren.
-  \item Visuelle Intelligenz macht es möglich, dass Menschen Bilder aus ihrem Gedächtnis widerherstellen können und räumlich denken können.
-  \item Kinästhetische Intelligenz beschreibt die Fähigkeit alle Teile des Körpers einzusetzen, um Probleme zu lösen. Diese Intelligenz ist beispielsweise bei Athleten oder Chirurgen ausgeprägt.
+  \item Visuelle/Räumliche Intelligenz macht es möglich, dass Menschen Bilder aus ihrem Gedächtnis widerherstellen können und räumlich denken können.
+  \item Körperlich Kinästhetische Intelligenz beschreibt die Fähigkeit alle Teile des Körpers einzusetzen, um Probleme zu lösen. Diese Intelligenz ist beispielsweise bei Athleten oder Chirurgen ausgeprägt.
   \item Interpersonale Intelligenz ist auch als Empathie bekannt und bezeichnet die Fähigkeit unausgesprochene Gefühle zu erkennen und zu beeinflussen.
   \item Intrapersonelle Intelligenz bezeichnet die Intelligenz eigene Gefühle, Stimmungen, Schwächen, zu erkennen und zu beinflussen.
   \item Naturalistische Intelligenz ist die Fähigkeit Naturphänomene zu erkennen und eine Sensibilität für sie zu entwickeln. Diese Fähigkeit sei bei Naturforschern und Landwirten stark ausgeprägt.
 \end{itemize}
+Kürzlich wurden die Dimension um die Ökologisch-naturalistische, die spirituale und die Existenziale Dimension ergänzt
 (vgl. \cite{Gardner1993})
-Zusammenfassend kann man sagen, dass die Möglichkeiten der Wahrnehmung und die emotionale Intelligenz des Menschen eine wichtige Rolle bei Gardners Intelligenztheorie spielen.
+Zusammenfassend kann man sagen, dass die Möglichkeiten der Wahrnehmung und die emotionale Intelligenz des Menschen eine wichtige Rolle bei \textsc{Gardners} Intelligenztheorie spielen. Weitere prozessorientierte Intelligenzmodelle, wie \textsc{Robert Sternbergs} \textit{triarchisches Intelligenzmodell} (vgl. \cite{Stern1984}) betonen hingegen eine stärkere soziokulturelle Abhängigkeit von interlektuellen Fähigkeiten. Desweiteren wird in der Forschung kontrovers diskutiert, welche Anteile der Intelligenz genetisch bedingt sind und welche Anteile die Sozialisation eines Menschen zu seinen interlektuellen Fähigkeiten beiträgt (Anlage-Umwelt-Kontroverse).
 
- \subsection{künstliche Intelligenz}
-Im nächsten Schritt wird der Begiff künstliche Intelligenz evaluiert. Auch hier gibt es verschiedene Ansätze den Begriff zu definieren. Eine gängige Ansicht ist, dass KI-Systeme verschiedene Grade an Intelligenz besitzen. So definiert K. Mainzer den Begriff künstliche Intelligenz folgendermaßen: Ein System heißt intelligent, wenn es selbstständig und effizient Probleme lösen kann. Der Grad der Intelligenz hängt vom Grad der Selbstständigkeit, dem Grad der Komplexität des Problems und dem Grad der Effizienz des Problemlösungsverfahrens ab. \cite{Mainzer2003}. Was diese Definition, jedoch auch widerspiegelt ist, dass künstliche Intelligenz sich in fast allen Fällen auf bestimmte Problemstellungen bezieht. Man bezeichnet solche KI-Systeme daher auch häufig als Expertensysteme. Dazu passt auch eine ältere Definition des amerikanischem Informatikers Elaine Rich, welcher 1985 den Begriff künstliche Intelligenz folgendermaßen definiert hat: ``Artificial intelligence (A.I.) is the study of how to make computers do things that people are better at.'' (vgl. \cite{Rich1985}).
+\subsection{Künstliche Intelligenz}
+Im Folgenden wird der Begiff der künstliche Intelligenz näher betrachtet. Auch hier gibt es verschiedene Ansätze den Begriff zu definieren. Eine gängige Ansicht ist es, dass KI-Systeme verschiedene Grade an Intelligenz besitzen. So definiert \textsc{Mainzer} den Begriff künstliche Intelligenz folgendermaßen: ``Ein System heißt intelligent, wenn es selbstständig und effizient Probleme lösen kann. Der Grad der Intelligenz hängt vom Grad der Selbstständigkeit, dem Grad der Komplexität des Problems und dem Grad der Effizienz des Problemlösungsverfahrens ab'' \cite{Mainzer2003}. Aus dieser Definition geht zudem hervor, dass künstliche Intelligenz sich in fast allen Fällen auf bestimmte Problemstellungen bezieht. Man bezeichnet solche KI-Systeme daher auch häufig als Expertensysteme. Dazu passend definierte bereits der amerikanische Informatiker \textsc{Elaine Rich} 1985 künstliche Intelligenz als ``The study of how to make computers do things that people are better at.'' (vgl. \cite{Rich1985})
 
-\subsubsection{Maschinelles Lernen}
-Auf Grundlage der Definitionen der Intelligenz aus dem ersten Teil des Textes können wir nun auch den Begriff ``Maschinelles Lernen'' einordnen und zwar als Teilaspekt der künstlichen Intelligenz. Es ist vergleichbar mit der fluiden Intelligenz von Horn und Cattle, denn maschinelles Lernen beschreibt ja den Lernprozess eines neuronalen Netzes. Der einzige Unterschied zu der fluiden Intelligenz ist, dass die fluide Intelligenz allgemeiner ist. Man hat heutzutage noch keine ``Allround'' maschinelle Lern Methode entwickelt, welche von Grund auf verschiedene unbekannte Probleme lösen kann. Man versucht also gezielt Probleme zu lösen, die ein Mensch noch besser lösen kann.
+Auf Grundlage der dargestellten Intelligenzmodelle aus dem kann nun der Begriff ``Maschinelles Lernen'' als Teilaspekt der künstlichen Intelligenz eingeordnet werden. Es ist vergleichbar mit der fluiden Intelligenz von \textsc{Cattel}, denn maschinelles Lernen beschreibt den Lernprozess Systemen (z.B. durch künstliche neuronale Netze). Der Unterschied zu der fluiden Intelligenz ist, dass die fluide Intelligenz des Menschen nicht auf einen spezifischen Bereich eingeschränkt sein muss. Wohingegen maschinelle Lernmethoden Lösungsansätze für spezifische Problemstellungen erlernen. Da derzeit noch keine ``Allround'' maschinelle Lernmethode entwickelt wurde, welche Lösungen für unbekannte Probleme verschiedener Bereiche erlernen kann. Man versucht heutzutage also gezielt einzelne Probleme zu lösen, die ein Mensch derzeit besser lösen kann.
 
-\subsection{Was macht Intelligenz aus}
-Mihlife der bis jetzt gewonnen Erkenntnisse kann nun skizziert werden was Intelligenz ausmacht. Es wurde festgestellt, dass Intelligenz verschiedene Facetten hat. Es gibt sowohl die Intelligenz die auf einen Erfahrungsschatz zurückgreifen kann, um in bekannten Situationen Entscheidungen zu treffen als auch die Intelligenz, die in unbekannten Situationen Probleme lösen kann. Intelligenz prägt sich dann noch in einer Reihe von Bereichen aus, die mit den Wahrnehmungsmechanismen und den unterbewussten kognitiven Prozessen des jeweiligen Systems zu tun haben. Das heißt das volle Potential der Intelligenz kann erst ausgeschöpft werden, wenn auch diese Wahrnehmungsmechanismen voll ausgeprägt sind. Mechanismen wie Mitgefühl oder Empathie, also emotionale Intelligenz sind teilweise noch schwieriger nachzuvollziehen, denn solche Empfinden oder Gefühle setzten sich aus der Kombination von Wahrnehmungsprozesen und kognitiven Leistungen basierend auf Erfahrungen zusammen. Intelligenz setzt sich also aus einer Vielzahl von Faktoren zusammen und ist abhängig davon, wie das System seine Umwelt wahrnehmen kann, bzw. was also die Realität für dieses System ist. Diese Wahrnehmung hat nämlich einen direkten Einfluss darauf, wie die Intelligenz sich weiterentwickeln kann. Desweiteren gäbe es nach dem Modell von Cattle und Horn wie oben erwähnt auch angeborene Eigenschaften von Intelligenz. Die menschliche und die künstliche Intelligenz kann man demnach, auch nur vergleichen, wenn man in Betracht zieht, was die Maschine für eine Realität hat, also was die Maschine wahrnehmen kann.
+\subsection{Was Intelligenz ausmacht}
+Mihlife der bis jetzt gewonnen Erkenntnisse kann nun skizziert werden, was Intelligenz ausmacht. Es wurde festgestellt, dass Intelligenz verschiedene Facetten hat. Es gibt sowohl die Intelligenz, die auf einen Erfahrungsschatz zurückgreifen kann, um in bekannten Situationen Entscheidungen zu treffen als auch die Intelligenz, die in unbekannten Situationen Probleme lösen kann. Intelligenz prägt lässt sich zudem in verschiedenen Dimensionen kategorisieren, die auch die Wahrnehmungsmechanismen und die unterbewussten kognitiven Prozesse des jeweiligen Systems mit einschließen. Das heißt, dass das volle Potential der Intelligenz erst ausgeschöpft werden kann, wenn auch diese Wahrnehmungsmechanismen voll ausgeprägt sind. Mechanismen wie Mitgefühl oder Empathie, also die hier nicht näher ausgeführte emotionale Intelligenz (siehe \cite{Mayer1990}) sind teilweise noch schwieriger zu erfassen, denn solche Empfindungen oder Gefühle setzten sich aus der Kombination von Wahrnehmungsprozesen und kognitiven Leistungen basierend auf Erfahrungen zusammen. Intelligenz setzt sich also aus einer Vielzahl von Faktoren zusammen und ist abhängig davon, wie das System seine Umwelt wahrnehmen kann bzw. was die Realität für dieses System ist. Denn diese Wahrnehmung hat einen direkten Einfluss darauf, wie die Intelligenz sich weiterentwickeln kann. Desweiteren gäbe es nach dem Modell von \textsc{Cattel}, wie oben erwähnt, auch angeborene Eigenschaften von Intelligenz, was wiederum in der Anlage-Umwelt-Kontroverse zum Asudruck kommt. Die menschliche und die künstliche Intelligenz kann man demnach, auch nur vergleichen, wenn man in Betracht zieht, was die Maschine für eine Realität hat, also was die Maschine im Vergleich zum Menschen wahrnehmen kann.
 
 \subsection{Was ist auf der Maschine möglich?}
-Heutzutage sind KI Systeme weitesgehend Expertensysteme, die darauf spezialisiert sind bestimmte Probleme besser zu lösen als Menschen. Auch humanoide Roboter wie ATLAS von der Firma Boston Dynamics (siehe: \cite{Atlas2019}), die versuchen so nah wie möglich an die menschliche Kinetik zu kommen, die bei Beobachtern den Reiz auslösen sich selbst mit diesen zu vergleichen, um zu sehen, dass sie diese Bewegungen perfektioniert haben, sind am Ende des Tages Expertensystem, die eben genau ihre Aufgabe erfüllen. Man muss aber in Betracht ziehen, was für Möglichketen diese Roboter haben. Sie verfügen über eine Reihe von Sensoren, die es Ihnen ermöglicht sich selbst und einen Teil der Umwelt wahrzunehmen. Ihre Realität beschränkt sich also auf diese Sensorenwahrnehmung, welche einen kleinen Teil der meschlichen Sensorik darstellen, mithilfe dieser Realität schaffen sie es ein Problem aus menschlicher Sicht exzellent zu lösen. Was ist nun, wenn die Wahrnehmung, sowie die maschinellen Lernprozesse dieser Maschinen weiterhin verbessert werden. Also die Antwort auf die Frage, was ist in Zukunft mit intelligenten Maschinen möglich? Laut dem Physiker Max Tegmark ``Gibt es kein Gesetz der Physik, das besagt, dass man nicht auch Maschinen konstruieren kann, die in jeder Hinsicht intelligenter sind als wir.'' (\cite{Tegmark2017}) Er ist weiterhin der Meinung, dass ``was uns Menschen zu den dominanten Einheiten auf diesem Planeten macht, das ist nicht unsere Kraft, sondern unsere Intelligenz. Wenn wir Maschinen konstruieren, die schlauer sind als wir, dann gibt es deswegen keine Garantie dafür, dass wir die Kontrolle behalten werden.'' (\cite{Tegmark2017}). Diese Ansicht geht dann auch wieder mit dem Zitat vom Anfang von Steven Hawking einher, nur dass Tegmark nicht direkt annimmt, dass die Entwicklung einer vollen künstllichen das Ende der Menschheit ausmacht, sondern es wichtig ist, wie man mit so einer Entwicklung umgeht.
+Heutzutage sind KI-Systeme weitesgehend Expertensysteme, die darauf spezialisiert sind, bestimmte Probleme besser zu lösen als Menschen. Auch humanoide Roboter wie ATLAS von der Firma Boston Dynamics (siehe: \cite{Atlas2019}), die versuchen so gut wie möglich die menschliche Kinetik zu imitieren, und so bei den Beobachtern den Reiz auslösen, die eigene Kinetik mit der des Roboters zu vergleichen. Dadurch wird die Debatte verstärkt, dass die Maschine den Menschen künftig übertreffen könnte, es wird allerdings außer Acht gelassen, dass diese Maschinen ihre spezifische Aufgabe nur erfüllt. Sie ist ein Experte für spezifische Bewegungen. Jedoch muss auch in Betracht gezogen werden, über welche Möglichkeiten diese Roboter verfügen bzw. was ihre Realität determiniert. Denn sie verfügen über eine Reihe von Sensoren, die es ihnen ausschließlich ermöglicht sich selbst und einen Teil der Umwelt wahrzunehmen. Ihre Realität beschränkt sich also auf diese Sensorenwahrnehmung, welche allerdings nur einen kleinen Teil der meschlichen Sensorik imitiert. Mithilfe dieser Realität schaffen sie es ein spezifisches Problem aus menschlicher Sicht nahezu optimal zu lösen.
 
-\subsubsection{Fazit}
-Zusammenfassend kann man sagen, dass Die Intelligenz sich durch ihre Vielfalt auszeichnet. Kognitive Gegebenheiten reichen nicht aus um ein hohen Grad an Intelligenz zu bilden, da ein Aspekt der Intelligenz auch ist, dass das intelligente System bei unbekannten Problemen diese analysieren kann und eine geeigente Lösung finden kann. Hierfür ist die wahrnehmbare Realität des Systems wichtig. Aus verschiedenen Wahrnehmungsmöglichkeiten lassen sich weitere Intelligenzaspekte ableiten, wie die emotionale Intelligenz beim Menschen. Laut den Physikern Steven Hawking und Max Tegmark, gibt es keine Faktoren, die die Entwicklung einer Intelligenz, die die Intelligenz eines Menschens übertrifft stoppen würde, sodass es notwendig wird, dass die Menschheit vorher lernt damit umzugehen, bzw. so eine Entwicklung unterbindet.
+Aber was ist nun, wenn die Wahrnehmung sowie die maschinellen Lernprozesse dieser Maschinen weiterhin verbessert werden? Das heißt, was wird in Zukunft mit intelligenten Maschinen möglich sein? Laut dem Physiker Max Tegmark ``Gibt es kein Gesetz der Physik, das besagt, dass man nicht auch Maschinen konstruieren kann, die in jeder Hinsicht intelligenter sind als wir'' \cite{Tegmark2017}. Er ist weiterhin der Meinung, dass das, ``was uns Menschen zu den dominanten Einheiten auf diesem Planeten macht, [...] ist nicht unsere Kraft, sondern unsere Intelligenz. Wenn wir Maschinen konstruieren, die schlauer sind als wir, dann gibt es deswegen keine Garantie dafür, dass wir die Kontrolle behalten werden'' (\cite{Tegmark2017}). Diese Ansicht geht mit dem Zitat von \textsc{Steven Hawking} einher, nur dass Tegmark präzisiert, dass die Entwicklung einer vollen künstllichen Intelligenz nicht das Ende der Menschheit bedeute, sondern es wichtig sei, wie man mit so einer Entwicklung umgehe. Eine solche künstliche Intelligenz könnte beispielsweise Arbeitsplätze redundant machen, welche dann von der Maschine besser und effizienter erledigt werden könnten. Eine derartige Entwicklung konnte in der Vergangenheit bereits beobachtet werden, als Maschinen zum Beispiel in der Automobilindustrie eingesetzt wurden, weil sie bestimmte körperliche Arbeiten ausdauernder und präziser durchführen konnten als Menschen. Wenn nun mehr geistige/interlektuelle Arbeitsplätze wegfallen, muss ebenso darauf geachtet werden, dass der wirtschaftliche Erfolg nicht bei einzelnen bleibt, die eine solche KI-Technologie bereitstellen, sondern die Gesellschaft davon profitiert.
+
+\subsection{Fazit}
+Es lässt sich zusammenfassen, dass die Intelligenz sich durch ihre Vielfalt auszeichnet. Kognitive Gegebenheiten reichen nicht aus, um einen hohen Grad an Intelligenz zu entwickeln, da ein Aspekt der Intelligenz ist, dass das intelligente System bei unbekannten Problemen diese analysieren kann und eine geeigente Lösung finden kann. Hierfür ist die wahrnehmbare Realität des Systems wichtig. Aus verschiedenen Wahrnehmungsmöglichkeiten lassen sich weitere Dimensionen der Intellligenz ableiten, wie die emotionale Intelligenz beim Menschen. Laut den Physikern \textsc{Steven Hawking} und \textsc{Max Tegmark}, gibt es keine Faktoren, die die Entwicklung einer Intelligenz, die die Intelligenz eines Menschens übertrifft stoppen würde, sodass es notwendig wird, dass die Menschheit vorher lernt damit umzugehen, bzw. so eine Entwicklung unterbindet. Sie argumentieren, dass auch komplexe Dimensionen der Intelligenz wie Empathie oder Gefühle nur ein Zusammenspiel biologischer, kognitiver Prozesse sind, welche potentiell auf einer Maschine realisierbar sein können. Offen bleibt, zu welchem Zeitpunkt eine solche Entwicklung möglich ist und welche Strategien die Menschheit entwickelt, um mit dieser Entwicklung umzugehen.
 
 \newpage
 
 
 
-\section{Was kann ich tun, um als Informatiker verantwortlich zu handeln?; $\frac{1}{2}$ Seite}
+\section{Was kann ich tun, um als Informatiker verantwortlich zu handeln?}
+Um als Informatiker verantwortungsbewusst zu handeln, kann ich mir bei jeder Konzeption/Entwicklung und Erforschung von Systemen und informationstechnischen Konzepten verinnerlichen und umsetzen.
+\begin{itemize}
+  \item Ich bin für meine eigenen Entscheidungen verantwortlich. Mir ist bewusst, dass Informationstechnologie schon in den Großteil der Lebensbereiche eingedrungen ist und ich mir Gedanken über die Auswirkung meiner Entwicklung machen muss.
+  \item Das Vertrauen, welches mir als Fachexperte entgegen gebracht wird, nutze ich nicht aus und kläre über mögliche Gefahren von Informationssystemen auf.
+  \item Ich lehne die Konzeption und Entwicklung von Informationssystemen ab, die Menschen- oder Bürgerrechte verletzen.
+  \item Ich sammle für meine Systeme teilweise persönliche Daten von Menschen. Diese muss ich schützen und nur so lange speichern, wie es für mein System notwendig ist. Ich behandle die Daten also so, als wären es meine eigenen.
+  \item Die zunehmende Zahl an technischen Geräten sorgt für eine größere Nutzung von Energie und Ressourcen. Ich versuche mit Informationstechnologie keine Energie oder Ressourcen zu verschwenden.
+\end{itemize}
+
+Diese Aspekte stammen aus dem Manifest für verantwortungsbewusste Softwareentwicklung (\cite{Loewe2015}) und lassen sich meiner Meinung nach auf alle Teilbereiche der Informatik beziehen. Diese kann ich unterschreiben, um mit meinem Namen hinter ihnen zu stehen.
+
+\clearpage
+\pagestyle{plain}
 
 \newpage
 
